@@ -16,7 +16,6 @@
     
     echo $andre = $student->id() . "</br>";
     echo $andre = $student->name() . "</br>";
-    echo $andre = $student->age() . "</br>";
 
   ?>
 </body>
