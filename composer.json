@@ -1,0 +1,15 @@
+{
+    "name": "andre/curso-pdo-alura",
+    "autoload": {
+        "psr-4": {
+            "Alura\\CursoPdo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "andremuro",
+            "email": "andrefelipe.muro@gmail.com"
+        }
+    ],
+    "require": {}
+}
