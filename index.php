@@ -15,7 +15,7 @@
     $student = new Student( 001, "André Muro", "07-08-1998");
     
     echo $andre = $student->id() . "</br>";
-    echo $andre = $student->name() . "</br>";
+    echo $andre = $student->age('1974-08-13') . "</br>";
 
   ?>
 </body>
