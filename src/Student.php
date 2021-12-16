@@ -35,8 +35,7 @@ class Student
     if (date("m") < $birthDate[1]) 
     {
       $age -= 1;
-    } elseif ((date("m") == $birthDate[1]) && (date("d") <= $birthDate[2]))
-    {
+    } elseif ((date("m") == $birthDate[1]) && (date("d") <= $birthDate[2])) {
       $age -= 1;
     }
     return $age;
