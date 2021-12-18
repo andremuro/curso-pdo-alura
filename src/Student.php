@@ -27,8 +27,17 @@ class Student
   {
     return $this->birthDate;
   }
-  public function age()
+  public function age($birthDate)
   {
-    
+    $date = date('Y-m-d', strtotime($birthDate));
+    $birthDate = explode("-",$date);
+    $age = date("Y") - $birthDate[0];
+    if (date("m") < $birthDate[1]) 
+    {
+      $age -= 1;
+    } elseif ((date("m") == $birthDate[1]) && (date("d") <= $birthDate[2])) {
+      $age -= 1;
+    }
+    return $age;
   }
 }
