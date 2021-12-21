@@ -12,10 +12,12 @@
     require_once "vendor/autoload.php";
     use Alura\CursoPdo\Student;
     
-    $student = new Student( 001, "André Muro", "07-08-1998");
+    $databasePath = __DIR__ . "/banco.sqlite";
+    $pdo = new PDO("sqlite:" . $databasePath);
+    $student = new Student( null, "André Muro", "1998-08-07");
     
-    echo $andre = $student->id() . "</br>";
-    //echo $andre = $student->age('1974-08-13') . "</br>";
+    $sqlInsert = "INSERT INTO students (name, birth_date) VALUES ('{$student->name()}','{$student->birthDate()}');";
+    echo $pdo->exec($sqlInsert);
 
   ?>
 </body>
