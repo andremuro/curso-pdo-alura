@@ -8,6 +8,8 @@ $databasePath = __DIR__ . "/banco.sqlite";
 $pdo = new PDO("sqlite:" . $databasePath);
 
 $statement = $pdo->query('SELECT * FROM students;');
+//var_dump($statement->fetchColumn(1));exit; Traz apenas uma coluna. No caso é o Nome.
+//var_dump($statement->fetch(PDO::FETCH_ASSOC));exit; Traz apenas o primeiro dado.
 $statementList = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
