@@ -1,8 +1,8 @@
 <?php
 
-namespace Alura\CursoPdo;
+namespace Alura\CursoPdo\Domain\Model;
 
-class Student 
+class Student
 {
   private $id;
   private $name;
@@ -13,7 +13,6 @@ class Student
     $this->id = $id;
     $this->name = $name;
     $this->birthDate = $birthDate;
-
   }
   public function id()
   {
@@ -30,10 +29,9 @@ class Student
   public function age($birthDate)
   {
     $date = date('Y-m-d', strtotime($birthDate));
-    $birthDate = explode("-",$date);
+    $birthDate = explode("-", $date);
     $age = date("Y") - $birthDate[0];
-    if (date("m") < $birthDate[1]) 
-    {
+    if (date("m") < $birthDate[1]) {
       $age -= 1;
     } elseif ((date("m") == $birthDate[1]) && (date("d") <= $birthDate[2])) {
       $age -= 1;

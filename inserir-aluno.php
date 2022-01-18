@@ -2,10 +2,10 @@
 
 require_once "vendor/autoload.php";
 
-use Alura\CursoPdo\Student;
-
-$databasePath = __DIR__ . "/banco.sqlite";
-$pdo = new PDO("sqlite:" . $databasePath);
+use Alura\CursoPdo\Domain\Model\Student;
+use Alura\CursoPdo\Infrastructure\Persistence\ConnectionCreator;
+//Método de criação estático
+$pdo = ConnectionCreator::createConnection();
 
 $student = new Student(null, "Jeferson", "1990-09-17");
 

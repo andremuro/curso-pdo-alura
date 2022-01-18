@@ -9,14 +9,29 @@ class ComposerStaticInit2a5b6774c9bf6e9782b386c1c1516cfa
     public static $prefixLengthsPsr4 = array (
         'A' => 
         array (
-            'Alura\\CursoPdo\\' => 15,
+            'Alura\\CursoPdo\\Infrastructure\\Repository\\' => 41,
+            'Alura\\CursoPdo\\Infrastructure\\Persistence\\' => 42,
+            'Alura\\CursoPdo\\Domain\\Repository\\' => 33,
+            'Alura\\CursoPdo\\Domain\\Model\\' => 28,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Alura\\CursoPdo\\' => 
+        'Alura\\CursoPdo\\Infrastructure\\Repository\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/../..' . '/src/Infrastructure/Repository',
+        ),
+        'Alura\\CursoPdo\\Infrastructure\\Persistence\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Infrastructure/Persistence',
+        ),
+        'Alura\\CursoPdo\\Domain\\Repository\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Domain/Repository',
+        ),
+        'Alura\\CursoPdo\\Domain\\Model\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Domain/Model',
         ),
     );
 

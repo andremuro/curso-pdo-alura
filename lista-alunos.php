@@ -2,10 +2,10 @@
 
 require_once "vendor/autoload.php";
 
-use Alura\CursoPdo\Student;
+use Alura\CursoPdo\Domain\Model\Student;
+use Alura\CursoPdo\Infrastructure\Persistence\ConnectionCreator;
 
-$databasePath = __DIR__ . "/banco.sqlite";
-$pdo = new PDO("sqlite:" . $databasePath);
+$pdo = ConnectionCreator::createConnection();
 
 $statement = $pdo->query('SELECT * FROM students;');
 //var_dump($statement->fetchColumn(1));exit; Traz apenas uma coluna. No caso é o Nome.

@@ -2,7 +2,10 @@
     "name": "andre/curso-pdo-alura",
     "autoload": {
         "psr-4": {
-            "Alura\\CursoPdo\\": "src/"
+            "Alura\\CursoPdo\\Domain\\Model\\": "src/Domain/Model",
+            "Alura\\CursoPdo\\Infrastructure\\Persistence\\": "src/Infrastructure/Persistence",
+            "Alura\\CursoPdo\\Domain\\Repository\\": "src/Domain/Repository",
+            "Alura\\CursoPdo\\Infrastructure\\Repository\\" : "src/Infrastructure/Repository"
         }
     },
     "authors": [
