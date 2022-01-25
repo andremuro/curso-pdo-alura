@@ -4,9 +4,16 @@ require_once "vendor/autoload.php";
 
 use Alura\CursoPdo\Domain\Model\Student;
 use Alura\CursoPdo\Infrastructure\Persistence\ConnectionCreator;
+use Alura\CursoPdo\Infrastructure\Repository\PdoStudentRepository;
 
 $pdo = ConnectionCreator::createConnection();
+$repository = new PdoStudentRepository($pdo);
+$studentList = $repository->allStudents();
+echo '<pre>';
+var_dump($studentList);
+echo '</pre>';
 
+/*
 $statement = $pdo->query('SELECT * FROM students;');
 //var_dump($statement->fetchColumn(1));exit; Traz apenas uma coluna. No caso é o Nome.
 //var_dump($statement->fetch(PDO::FETCH_ASSOC));exit; Traz apenas o primeiro dado.
@@ -34,3 +41,4 @@ $statementList = $statement->fetchAll(PDO::FETCH_ASSOC);
 </body>
 
 </html>
+*/

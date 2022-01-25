@@ -9,7 +9,13 @@ $pdo = ConnectionCreator::createConnection();
 
 $sqlDelete = "DELETE FROM students WHERE id = ?;";
 $preparedStatement = $pdo->prepare($sqlDelete);
-$preparedStatement->bindValue(1, 5, PDO::PARAM_INT);
-if ($preparedStatement->execute()) {
-  echo "Aluno Excluido";
+
+$idPrimeiro = 3;
+$idUltimo = 36;
+
+for ($x = $idPrimeiro; $x <= $idUltimo; $x++) {
+  $preparedStatement->bindValue(1, $x, PDO::PARAM_INT);
+  if ($preparedStatement->execute()) {
+    echo $x . " - " . "Aluno Excluido </br>";
+  }
 }
